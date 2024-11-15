@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+    <p>ABC XYZ</p>
+    <button>OK</button>
+    <br>
+    <a href="/getAllUser">Get All User</a><br>
+    <a href="/getAUser">Get A User</a>
+    <a href="/displayUsers">Display User</a>
+    <hr>
+    <% if(message) {%>
+      <h1><%= message%></h1>
+    <%}%>
+    <form action="/createUser" method="POST"
+          enctype="application/x-www-form-urlencoded">
+      <div style="display:flex; flex-direction:column;gap: 10px">
+        <input name="name" placeholder="Enter name....">
+        <input name="age" placeholder="Enter age....">
+        <button type="submit">Create User</button>
+      </div>
+    </form>
+  </body>
+</html>

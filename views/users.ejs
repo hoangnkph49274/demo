@@ -1,0 +1,21 @@
+
+<html lang="en">
+<head>
+</head>
+<body>
+    <h1>Danh Sach User</h1>
+    <p>Hiển tị danh sách User trên hệ thống</p>
+    <h2><%= nam %>></h2>
+    <% for(var i=0;i<data.length;i++){ %>
+        <div><%= data[i].id %></div>
+        <div><%= data[i].name %></div>
+        <div><%= data[i].address %></div>
+        <div><%= data[i].phone %></div>
+        <a href="/deleteUser?id=<%= data[i].id %>">Delete</a>
+        <a href="/updateUser?id=<%= data[i].id %>">Update</a>
+        <hr>
+    <% } %>
+
+
+</body>
+</html>
